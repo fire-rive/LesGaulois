@@ -19,7 +19,19 @@ public class Gaulois {
 	}
 	
 	private String prendreParole() {
-		return "Le romain " + nom + " : ";
+		return "Le gaulois " + nom + " : ";
 		
 	}
+	
+	public static void main(String[] args) {
+		Gaulois asterix;
+		asterix=new Gaulois("Astérix", 8);
+		
+	}
+
+	@Override
+	public String toString() {
+		return "Gaulois [nom=" + nom + "]";
+	}
+	
 }
