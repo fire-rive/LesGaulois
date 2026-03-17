@@ -20,5 +20,18 @@ public class Romain {
 		return "Le romain " + nom + " : ";
 		
 	}
+	
+	public void recevoirCoup(int forceCoup) {
+		this.force=force-forceCoup;
+		if (force<1) {
+			parler("j'abandonne");
+			prendreParole();
+		} else {
+			parler("Aie");
+		}
+		
+		
+		
+	}
 
 }
