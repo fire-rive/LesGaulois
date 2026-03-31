@@ -26,7 +26,7 @@ public class Druide {
 		Chaudron potion;
 		potion=new Chaudron(quantite, forcePotion);
 		potion.remplirChaudron(quantite, forcePotion);
-		parler("J'ai concoctÃ©"+ quantite + " dose de potion magique.Elle a une force de"+ forcePotion+".");
+		parler("J'ai concocté "+ quantite + " dose de potion magique.Elle a une force de"+ forcePotion+".");
 		return potion;
 	}
 	
@@ -34,15 +34,14 @@ public class Druide {
 		String nom_g;
 		nom_g=gaulois.getNom();
 		if (potion.resterPotion()) {
-			if (nom_g=="ObÃ©lix") {
-				parler("Non, "+ nom_g + " Non !...Et tu le sais trÃ¨s bien !");
-				
+			if (nom_g=="Obélix") {
+				parler("Non, "+ nom_g + " Non !...Et tu le sais très bien !");
 			} else {
-
+				gaulois.boirePotion(potion.PrendreLouche());
+				parler("Tiens "+ nom_g + " un peu de potion magique");
 			}
-			
 		} else {
-
+			parler("Désolé, "+ nom_g+" il n'y as plus une seule goutte de binouze");
 		}	
 	}
 

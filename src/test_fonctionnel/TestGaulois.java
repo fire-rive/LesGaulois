@@ -2,6 +2,8 @@ package test_fonctionnel;
 
 import java.util.Iterator;
 
+import personnages.Chaudron;
+import personnages.Druide;
 import personnages.Gaulois;
 import personnages.Romain;
 
@@ -9,21 +11,39 @@ public class TestGaulois {
 	
 	public static void main(String[] args) {
 		Gaulois asterix;
-		asterix =new Gaulois("AstÃ©rix", 8);
+		asterix =new Gaulois("Astérix", 8);
 		
 		Gaulois obelix;
-		obelix =new Gaulois("ObÃ©lix", 16);
+		obelix =new Gaulois("Obélix", 16);
 		
-		asterix.parler("Bonjour ObÃ©lix.");
-		obelix.parler("Bonjour AstÃ©rix. Ca te dirais d'aller chasser des sangliers ?)");
-		asterix.parler("Oui trÃ¨s bonne idÃ©e.");
+		
+		asterix.parler("Bonjour Obélix.");
+		obelix.parler("Bonjour Astérix. Ca te dirais d'aller chasser des sangliers ?)");
+		asterix.parler("Oui très bonne idée.");
+		
+		Romain brutus;
+		brutus =new Romain("brutus", 14);
+		
+		Druide panoramix;
+		panoramix=new Druide("Panoramix", 2);
 		
 		Romain minus;
 		minus =new Romain("Minus", 6);
-		System.out.println("Dans la forÃªt " + asterix.getNom() + " et  "+ obelix.getNom() + " tombent nez Ã  nez sur le romain " + minus.getNom() + ".");
+		
+		
+		System.out.println("Dans la forêt " + asterix.getNom() + " et  "+ obelix.getNom() + " tombent nez à  nez sur le romain " + minus.getNom() + ".");
 		for (int i = 0; i < 3; i++) {
 			asterix.frapper(minus);
 		}
+		
+		Chaudron potion;
+		potion=panoramix.fabriquerPotion(4, 3);
+		panoramix.booster(obelix, potion);
+		panoramix.booster(asterix, potion);
+		for (int i = 0; i < 3; i++) {
+			asterix.frapper(brutus);
+		}
+		
 		
 	}
 

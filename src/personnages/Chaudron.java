@@ -22,6 +22,15 @@ public class Chaudron {
 		
 	}
 	
+	public int PrendreLouche() {
+		if (quantitePotion==0) {
+			forcePotion=0;
+		}
+		quantitePotion= quantitePotion - forcePotion;
+		return forcePotion;
+		
+	}
+	
 	public void remplirChaudron(int quantite, int forcePotion) {
 		this.quantitePotion=quantite;
 		this.forcePotion=forcePotion;

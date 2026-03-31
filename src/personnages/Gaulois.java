@@ -24,10 +24,14 @@ public class Gaulois {
 		
 	}
 	
+	public void boirePotion(int forcePotion) {
+		effetPotion = forcePotion;		
+	}
+	
 
 	public static void main(String[] args) {
 		Gaulois asterix ;
-		asterix=new Gaulois("AstÃ©rix", 8);
+		asterix=new Gaulois("Astérix", 8);
 		System.out.println(asterix);
 		
 	}
@@ -39,8 +43,10 @@ public class Gaulois {
 	
 	public void frapper(Romain romain) {
 		System.out.println(nom + " envoie un grand coup dans la machoire de " + romain.getNom());
-		romain.recevoirCoup(force / 3);
-		
+		romain.recevoirCoup(force*effetPotion / 3);
+		if (effetPotion>1) {
+		effetPotion=effetPotion-1;
+		}
 	}
 
 	
