@@ -1,9 +1,11 @@
 package personnages;
+import village_gaulois.Village;
 
 public class Gaulois {
 	private String nom;
 	private int force;
 	private int effetPotion;
+	private Village duvillage;
 	
 	public Gaulois(String nom, int force) {
 		this.nom = nom;
@@ -31,7 +33,7 @@ public class Gaulois {
 
 	public static void main(String[] args) {
 		Gaulois asterix ;
-		asterix=new Gaulois("Astérix", 8);
+		asterix=new Gaulois("Astï¿½rix", 8);
 		System.out.println(asterix);
 		
 	}
@@ -47,6 +49,22 @@ public class Gaulois {
 		if (effetPotion>1) {
 		effetPotion=effetPotion-1;
 		}
+	}
+	
+	public void SetVillage(Village village) {
+		this.duvillage=village;
+	}
+	
+	public void sePresenter() {
+		if (duvillage==null) {
+			System.out.print("Le Gaulois "+getNom()+" : \"Bonjour,je m'appelle "+getNom()+". Je voyage de villages en villages.\"\n");
+		}
+		else {
+			if (duvillage.getChef()==this) {
+				System.out.print("Le Gaulois "+getNom()+" : \"Bonjour,je m'appelle "+getNom()+". Je suis le chef du village : "+duvillage.getNom()+".\"\n");
+			}
+			else{System.out.print("Le Gaulois "+getNom()+" : \"Bonjour,je m'appelle "+getNom()+". J'habite le village : "+duvillage.getNom()+".\"\n");}
+		}	
 	}
 
 	
