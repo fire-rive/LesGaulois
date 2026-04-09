@@ -1,5 +1,6 @@
-package personnages;
-
+package objet;
+import personnages.Gaulois;
+import personnages.Druide;
 public class Chaudron {
 	private int quantitePotion;
 	private int forcePotion;

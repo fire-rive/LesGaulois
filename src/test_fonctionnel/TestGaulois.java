@@ -1,25 +1,23 @@
 package test_fonctionnel;
 
 import java.util.Iterator;
-
-import personnages.Chaudron;
 import personnages.Druide;
 import personnages.Gaulois;
 import personnages.Romain;
-
+import objet.Chaudron;
 public class TestGaulois {
 	
 	public static void main(String[] args) {
 		Gaulois asterix;
-		asterix =new Gaulois("Astérix", 8);
+		asterix =new Gaulois("Astï¿½rix", 8);
 		
 		Gaulois obelix;
-		obelix =new Gaulois("Obélix", 16);
+		obelix =new Gaulois("Obï¿½lix", 16);
 		
 		
-		asterix.parler("Bonjour Obélix.");
-		obelix.parler("Bonjour Astérix. Ca te dirais d'aller chasser des sangliers ?)");
-		asterix.parler("Oui très bonne idée.");
+		asterix.parler("Bonjour Obï¿½lix.");
+		obelix.parler("Bonjour Astï¿½rix. Ca te dirais d'aller chasser des sangliers ?)");
+		asterix.parler("Oui trï¿½s bonne idï¿½e.");
 		
 		Romain brutus;
 		brutus =new Romain("brutus", 14);
@@ -31,7 +29,7 @@ public class TestGaulois {
 		minus =new Romain("Minus", 6);
 		
 		
-		System.out.println("Dans la forêt " + asterix.getNom() + " et  "+ obelix.getNom() + " tombent nez à  nez sur le romain " + minus.getNom() + ".");
+		System.out.println("Dans la forï¿½t " + asterix.getNom() + " et  "+ obelix.getNom() + " tombent nez ï¿½ nez sur le romain " + minus.getNom() + ".");
 		for (int i = 0; i < 3; i++) {
 			asterix.frapper(minus);
 		}
