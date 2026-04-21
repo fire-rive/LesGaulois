@@ -33,7 +33,7 @@ public class Druide {
 		String nom_g;
 		nom_g=gaulois.getNom();
 		if (potion.resterPotion()) {
-			if (nom_g=="Ob�lix") {
+			if (nom_g=="Obélix") {
 				parler("Non, "+ nom_g + " Non !...Et tu le sais tr�s bien !");
 			} else {
 				gaulois.boirePotion(potion.PrendreLouche());

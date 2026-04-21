@@ -5,7 +5,7 @@ import objet.Equipement;
 public class Gaulois {
 	private String nom;
 //	private int force;
-	private int effetPotion;
+	private int effetPotion=1;
 	private Village duvillage;
 	private int force;
 	private int nbTrophees;
@@ -61,7 +61,7 @@ public class Gaulois {
 	
 	public void frapper(Romain romain) {
 		System.out.println(nom + " envoie un grand coup dans la mâchoire de "+ romain.getNom());
-		Equipement[] tropheeRecuperer = romain.recevoirCoup((force / 3) * effetPotion);
+		Equipement[] tropheeRecuperer = romain.recevoirCoup((force / 2) * effetPotion);
 		effetPotion--;
 		if (effetPotion < 1) {
 			effetPotion = 1;
